@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT address (#PCDATA) >
+<!ELEMENT phone (#PCDATA) >
+<!ELEMENT billto (name, address, phone*) >
+<!ELEMENT shipto (name, address, phone*) >
+
+<!ELEMENT itemid (#PCDATA) >
+<!ELEMENT quantity (#PCDATA) >
+<!ELEMENT item (itemid, quantity) >
+<!ELEMENT items (item*) >
+
+<!ELEMENT order (billto, shipto, items) >
+<!ATTLIST order id CDATA #REQUIRED >
